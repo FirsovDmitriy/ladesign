@@ -1,0 +1,33 @@
+// 1200
+
+.container {
+  max-width: $container;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include media-down($breakpoint-xxl-max) {
+    max-width: rem(960);
+  }
+
+  @include media-down($breakpoint-lg-max) {
+    max-width: rem(708);
+  }
+
+  @include media-down($breakpoint-sm-max) {
+    max-width: none;
+  } 
+
+}
+
+.centered {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}

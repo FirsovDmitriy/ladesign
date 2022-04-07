@@ -1,0 +1,27 @@
+.btn {
+  padding: rem(13) rem(55);
+  border: 1px solid #393246;
+  color: #393246;
+  text-transform: uppercase;
+  transition: background-color .5s, color .3s ease-in-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #393246;
+      color: #FFF;
+    }
+  }
+
+  &--purple-theme {
+    color: #FFF;
+    background-color: #393246;
+    border: none;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #4A415A;
+      }
+    }
+  }
+  
+}

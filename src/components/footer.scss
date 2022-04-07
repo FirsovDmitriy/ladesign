@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(95) 0;
+  background: $footer-color;
+}
+
+.footer__row {
+  &:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+}
+
+.footer__link {
+  @include roboto-condensed();
+  font-weight: 400;
+  font-size: rem(14);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.footer__link:not(:last-child) {
+  margin-right: rem(30);
+}
+
+.footer__copyright {
+  font-size: rem(13);
+  color: #878787;
+}

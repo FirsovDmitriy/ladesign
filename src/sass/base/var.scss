@@ -1,0 +1,25 @@
+
+$container: rem(1230); // 1200 + 30
+$container-lg: rem(960);
+
+$white: #FFF;
+
+$background-dimming: rgba(0, 0, 0, 0.6);
+
+$greyish-purplish-blue: #393246;
+$primary-text-color: #777;
+$line-color: #D5D5D5;
+$footer-color: #F7F7F7;
+
+
+$transition: .3s all;
+
+
+$breakpoint-sm-max:   576px;
+
+$breakpoint-md-max:   768px;
+$breakpoint-md-min:   767.98px;
+
+$breakpoint-lg-max:   992px;
+$breakpoint-xl-max:   1023.98px;
+$breakpoint-xxl-max:  1400px;

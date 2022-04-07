@@ -1,0 +1,33 @@
+.offer {
+  padding: rem(100) 0 rem(150) 0;
+}
+
+.offer__row {
+  display: flex;
+}
+
+.offer__col--right {
+  flex: 0 0 rem(380);
+}
+
+.answer-col {
+  flex: 0 0 rem(687);
+}
+
+.answer-col__item {
+  &:not(:last-child) {
+    margin-bottom: rem(25);
+  }
+  padding-bottom: rem(25);
+  border-bottom: 1px solid $line-color;
+}
+
+.answer-col__title {
+  &:not(:last-child) {
+    margin-bottom: rem(12);
+  }
+}
+
+.answer-col__text {
+  max-width: rem(580);
+}

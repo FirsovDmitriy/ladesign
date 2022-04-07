@@ -1,0 +1,70 @@
+@import 'accordion';
+
+.advantage {
+  padding-top: 150px;
+}
+
+.advantage__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantage__col:nth-child(1) {
+  max-width: rem(515);
+  margin: 0 41px 0 0;
+}
+
+.advantage__col:last-child {
+  width: rem(585);
+}
+
+.advantage__subtitle {
+  margin-bottom: rem(50);
+}
+
+.advantage__wrapper {
+  position: relative;
+  height: 0;
+  padding-top: aspect-ratio(528, 585);
+  overflow: hidden;
+}
+
+@include media-down($breakpoint-xxl-max) {
+  .advantage__col:nth-child(1) {
+    max-width: rem(440);
+  }
+
+  .advantage__col:last-child {
+    width: 450px;
+  }
+
+  .advantage__wrapper {
+    padding-top: aspect-ratio(528, 450);
+  }
+}
+
+@include media-down($breakpoint-xl-max) {
+  .advantage__row {
+    flex-direction: column;
+  }
+
+  .advantage__col:nth-child(1) {
+    max-width: none;
+    width: 100%;
+    margin: 0 0 rem(50) 0;
+  }
+
+  .advantage__col:last-child {
+    width: 100%;
+  }
+
+  .advantage__wrapper {
+    padding-top: aspect-ratio(528, 678);
+  }
+}
+
+@include media-down($breakpoint-sm-max) {
+  .advantage__wrapper {
+    margin: 0 -15px 0 -15px;
+  }
+}

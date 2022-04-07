@@ -1,0 +1,35 @@
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: rem(26) 0;
+  border-bottom: 1px solid $line-color;
+}
+
+.accordion__item:nth-child(1) {
+  .accordion__header {
+    border-top: 1px solid $line-color;
+  }
+}
+
+.accordion__title {
+  flex: 0 1 rem(439);
+  text-align: left;
+}
+
+.accordion__circle {
+  flex: 0 0 rem(30);
+  height: rem(30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $line-color;
+  border-radius: 50%;
+}
+
+@include media-down($breakpoint-sm-max) {
+  .accordion__title {
+    flex-basis: rem(216);
+  }
+}

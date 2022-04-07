@@ -1,0 +1,54 @@
+.application {
+  display: flex;
+  justify-content: center;
+  padding: rem(129) 0;
+}
+
+.application__btn {
+  display: flex;
+  align-items: center;
+  padding-bottom: rem(6);
+  border-bottom: 1px solid $line-color;
+  transition: $transition;
+}
+
+.application__title {
+  margin: 0;
+}
+
+.application__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 30px;
+  height: 30px;
+}
+
+.application__svg {
+  align-self: flex-start;
+  flex: 0 0 rem(16);
+  height: rem(16);
+  stroke: #000;
+}
+
+@media (any-hover: hover) {
+  .application__btn:hover {
+    color: $greyish-purplish-blue;
+    border-bottom-color: $greyish-purplish-blue;
+  }
+
+  .application__btn:hover .application__svg {
+    stroke: $greyish-purplish-blue;
+  }
+}
+
+@include media-down($breakpoint-sm-max) {
+  .application__title {
+    font-size: rem(16);
+  }
+
+  .application__svg {
+    flex-basis: rem(9);
+    height: rem(9);
+  }
+}

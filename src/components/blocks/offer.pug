@@ -1,0 +1,13 @@
+include offer-list
+
+.offer
+  .container 
+    .offer__row 
+      .offer__col.offer__col--right
+        h3.offer__title зачем вам нужен дизайн-проект
+      .answer-col.offer__col
+          ul.answer-col__list 
+            each item in answers 
+              li.answer-col__item
+                h4.answer-col__title= item.title 
+                p.answer-col__text= item.text

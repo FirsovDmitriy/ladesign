@@ -1,0 +1,34 @@
+.phone {
+  display: flex;
+  align-items: center;
+  transition: $transition;
+}
+.phone__svg {
+  width: rem(21);
+  height: rem(21);
+  fill: transparent;
+  stroke: $white;
+}
+.phone__link {
+  font-size: rem(18);
+  margin-left: rem(10);
+}
+
+@media (any-hover: hover) {
+  .phone:hover .phone__svg {
+    // fill: $greyish-purplish-blue;
+    // stroke: $greyish-purplish-blue;
+
+  }
+
+  .phone:hover .phone__link {
+    // color: $greyish-purplish-blue;
+    text-decoration: underline;
+  }
+}
+
+@include media-down(576px) {
+  .phone__link {
+    font-size: rem(16);
+  }
+}

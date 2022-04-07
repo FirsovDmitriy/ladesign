@@ -1,0 +1,173 @@
+@use 'sass:math';
+
+@import 'base/reset';
+
+/*
+ --------------- FONTS 
+*/
+@font-face {
+  font-family: "Roboto";
+  src: /*url('../font/Futura-Normal.woff2') format('woff2'),*/
+    url('../font/Roboto-Light.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: /*url('../font/Futura-Normal.woff2') format('woff2'),*/
+    url('../font/Roboto-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: /*url('../font/Futura-Normal.woff2') format('woff2'),*/
+    url('../font/RobotoCondensed-Light.woff') format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: /*url('../font/Futura-Normal.woff2') format('woff2'),*/
+    url('../font/RobotoCondensed-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+/*
+ ----------------------------------------------------------------- 
+*/
+
+/*
+ --------------- MIXIN 
+*/
+@mixin roboto {
+  font: {
+    family: "Roboto";
+    size: rem(16);
+  }
+}
+
+@mixin roboto-condensed {
+  font: {
+    family: "Roboto Condensed";
+  }
+}
+
+@mixin media-down ($max-width: 0px) {
+	@media screen and (max-width: $max-width) {
+		@content;
+	}
+}
+
+@mixin media-up ($min-width: 0px) {
+	@media screen and (min-width: $min-width) {
+		@content;
+	}
+}
+
+@mixin media-only ($min-width: 0px, $max-width: 0px) {
+	@media (min-width: $min-width) and (max-width: $max-width) {
+		@content;
+	}
+}
+/*
+ ----------------------------------------------------------------- 
+*/
+
+/*
+ --------------- FUNCTION 
+*/
+@function rem ($px) {
+  $result: #{math.div($px, 16)}rem;
+  @return $result;
+}
+
+@function aspect-ratio ($hight, $width) {
+  $result: #{math.div($hight, $width) * 100%};
+  @return $result;
+}
+/*
+ ----------------------------------------------------------------- 
+*/
+
+// VAR
+@import 'base/var';
+// GRID
+@import 'base/grid';
+
+body {
+  @include roboto();
+  min-height: 100vh;
+  color: $primary-text-color;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1 1 100%;
+}
+
+h1, h2, h3, h4 {
+  @include roboto-condensed();
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: rem(140);
+  line-height: math.div(164, 140); // line-height - 164 / font-size - 140
+  @include media-up(1920.99px) {
+    font-size: calc(rem(60) + (140 - 22) * (100vw - 320px) / (1920 - 320) );
+  }
+
+  @include media-down(767.98px) {
+    font-size: rem(60);
+    line-height: math.div(70, 60);
+  }
+}
+
+h2 {
+  font-size: rem(40);
+  line-height: math.div(47, 40);
+  margin: 0 0 rem(50) 0;
+  @include media-down($breakpoint-md-min) {
+    font-size: rem(30);
+    line-height: math.div(36, 30);
+  }
+}
+
+h3 {
+  font-size: rem(30);
+}
+
+h4 {
+  font-size: rem(20);
+  letter-spacing: 0.12em;
+  @include media-down(767.98px) {
+    font-size: rem(16);
+  }
+}
+
+// COMPONENTS
+@import '../components/header';
+@import '../components/menu/menu';
+
+@import '../components/phone';
+@import '../components/full-screen';
+
+@import '../components/advantage';
+
+@import '../components/portfolio/portfolio';
+
+@import '../components/footer';
+
+@import '../components/blocks/offer';
+
+// COMPONENTS UI
+@import '../components/ui/button';
+@import '../components/ui/application';

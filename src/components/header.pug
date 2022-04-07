@@ -1,0 +1,14 @@
+include phone
+
+header.header 
+  .container 
+    .header__row 
+      a.header__logo(href="#")
+        picture
+          source(media="(max-width: 576px)", srcset="img/logo-s.png") 
+          img(src="img/logo.png", alt="" data-img value="1")
+      include menu/menu
+      .header__col
+        +phone('header__phone')
+        button.header__btn-burger
+          span.header__line 

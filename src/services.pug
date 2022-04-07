@@ -1,0 +1,22 @@
+include components/blocks/slider
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Ladesign - услуги и цены
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    link(rel="stylesheet", href="sass/style.scss")
+  body 
+    .wrapper 
+      include components/header
+      main.main 
+        //- h2.services-title Услуги и цены
+        include components/blocks/offer
+        +projects('реализованные проекты')
+        include components/ui/application
+      include components/footer
+
+    script(type="module", src="js/index.js")

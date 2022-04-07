@@ -1,0 +1,47 @@
+.tab-bar {
+  display: grid;
+  justify-items: center;
+  margin-bottom: rem(40);
+}
+
+.tab-bar__row {
+  display: flex;
+  flex-shrink: 0;
+  height: rem(36);
+  border-bottom: 1px solid $line-color;
+}
+
+.tab-bar__col {
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+  &:not(:last-child) {
+    margin-right: rem(69);
+  }
+}
+
+.tab-bar__col--active {
+  color: $greyish-purplish-blue;
+  border-bottom: 2px solid $greyish-purplish-blue;
+}
+
+.tab-bar__text {
+  @include roboto-condensed();
+  align-self: center;
+  font-size: rem(14);
+  line-height: math.div(16, 14);
+  margin-right: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tab-bar__number {
+  font-size: rem(14);
+  align-self: flex-start;
+}
+
+@include media-down($breakpoint-md-max) {
+  .tab-bar {
+    overflow-x: scroll;
+  }
+}
