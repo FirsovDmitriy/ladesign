@@ -1,27 +1,44 @@
 .btn {
-  padding: rem(13) rem(55);
-  border: 1px solid #393246;
+  display: flex;
+  align-items: center;
+  padding: rem(22) rem(55);
   color: #393246;
   text-transform: uppercase;
-  transition: background-color .5s, color .3s ease-in-out;
+  border: 1px solid #393246;
+  transition: background-color .4s linear;
 
   @media (any-hover: hover) {
     &:hover {
       background-color: #393246;
-      color: #FFF;
+      color: $white;
+
+      .btn__svg {
+        stroke: $white;
+      }
     }
   }
 
-  &--purple-theme {
-    color: #FFF;
+  &--dark-theme {
+    color: $white;
     background-color: #393246;
-    border: none;
+    border: 1px solid $greyish-purplish-blue;
 
     @media (any-hover: hover) {
       &:hover {
         background-color: #4A415A;
       }
     }
+
+    .btn__svg {
+      stroke: $white;
+    }
   }
   
+}
+
+.btn__svg {
+  width: rem(10);
+  height: rem(10);
+  margin-left: rem(10);
+  stroke: $greyish-purplish-blue;
 }

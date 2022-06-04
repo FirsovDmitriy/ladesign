@@ -28,7 +28,7 @@
 
 @include media-down($breakpoint-md-max) {
   .menu {
-    // position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -36,7 +36,16 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    transform: translateX(100%);
+    transition: all .4s ease-in-out;
     background: #080808;
+    opacity: 0;
+  }
+
+  .menu--visible {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
   }
 
   .menu__list {

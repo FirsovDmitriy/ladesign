@@ -98,6 +98,7 @@
 body {
   @include roboto();
   min-height: 100vh;
+  font-weight: 300;
   color: $primary-text-color;
 }
 
@@ -135,7 +136,7 @@ h2 {
   font-size: rem(40);
   line-height: math.div(47, 40);
   margin: 0 0 rem(50) 0;
-  @include media-down($breakpoint-md-min) {
+  @include media-down($breakpoint-md-max) {
     font-size: rem(30);
     line-height: math.div(36, 30);
   }
@@ -143,6 +144,10 @@ h2 {
 
 h3 {
   font-size: rem(30);
+  line-height: 1.5;
+  @include media-down(576px) {
+    font-size: rem(20);
+  }
 }
 
 h4 {
@@ -167,7 +172,22 @@ h4 {
 @import '../components/footer';
 
 @import '../components/blocks/offer';
+@import '../components/price/price';
+
+@import '../components/projects/projects';
+
+@import '../components/feedback/feedback';
+@import '../components/contact-block/contacts';
+
+
+@import './work';
+
+@import '../components/popup/popup';
 
 // COMPONENTS UI
 @import '../components/ui/button';
 @import '../components/ui/application';
+@import '../components/ui/carousel-arrows.scss';
+
+@import '../components/ui/control';
+@import '../components/ui/file-field';

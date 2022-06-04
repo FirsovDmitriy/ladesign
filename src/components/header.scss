@@ -16,30 +16,39 @@
 
 @include media-down($breakpoint-md-max) {
   .header__logo {
-    z-index: 1;
+    z-index: 2;
+    line-height: 0;
   }
 
   .header__col {
     position: relative;
     display: flex;
+    align-items: center;
   }
 
   .header__btn-burger {
-    display: block;
+    display: flex;
     margin-left: rem(80);
+    &--dark {
+      .header__line, .header__line::before, .header__line::after {
+        background: $greyish-purplish-blue;
+      }
+    }
   }
 
   .header__line {
     position: relative;
-    display: block;
+    z-index: 3;
+    display: flex;
+    transition: all .5s ease-out;
   }
 
   .header__line, .header__line::before, .header__line::after {
     width: rem(40);
-    height: 3px;
+    height: 2px;
     background: $white;
   }
-
+ 
   .header__line::before, .header__line::after {
     content: '';
     position: absolute;
@@ -47,11 +56,13 @@
   }
 
   .header__line::before {
-    top: -10px;
+    top: -9px;
+    transition: all .4s ease-out;
   }
 
   .header__line::after {
-    top: 10px;
+    top: 9px;
+    transition: all .3s ease-out;
   }
 
   .header__btn-burger--active .header__line {
@@ -64,11 +75,11 @@
   }
 
   .header__btn-burger--active .header__line::before {
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
 
   .header__btn-burger--active .header__line::after {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 }
 

@@ -73,3 +73,8 @@ h4 {
   font-family: inherit;
   font-weight: inherit;
 }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}

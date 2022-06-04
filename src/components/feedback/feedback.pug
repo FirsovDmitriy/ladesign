@@ -1,0 +1,17 @@
+include ../ui/control
+include ../ui/button
+include ../ui/file-field
+- var arrow = true
+
+.feedback
+  h3.feedback__title Напишите нам
+  p.feedback__text Мы всегда рады ответить на интересующие  вас вопросы. Заполните форму и наш специалист свяжется с вами.
+  form.feedback__form(data-form)
+    .feedback__block() 
+      +control('feedback__control','Ваше имя', 'text')
+      +control('feedback__control', 'Ваша эл.почта', 'email')
+      +control('feedback__control', 'Ваш вопрос', 'text')
+    +file-field('feedback__input-field')
+    .feedback__row 
+      +button('отправить', 'btn--dark-theme')
+      p.feedback__agreement Нажимая на кнопку, я даю <a href="#" class="feedback__link">согласие на обработку персональных данных</a>

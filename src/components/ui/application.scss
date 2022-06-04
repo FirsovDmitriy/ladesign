@@ -42,7 +42,17 @@
   }
 }
 
+@include media-down(992px) {
+  .application {
+    padding: rem(100);
+  }
+}
+
 @include media-down($breakpoint-sm-max) {
+  .application {
+    padding: rem(70) 0;
+  }
+
   .application__title {
     font-size: rem(16);
   }

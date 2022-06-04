@@ -1,0 +1,11 @@
+include ../ui/carousel-arrows
+include carousel-list
+
+.carousel-projects.swiper 
+  .swiper-wrapper 
+    each img in imgs
+      .carousel-projects__slide.swiper-slide
+        .carousel-projects__wrapper 
+          img.carousel-projects__img.centered(src= img.path, alt="")
+  +btn-prev()
+  +btn-next()

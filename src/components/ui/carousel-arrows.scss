@@ -1,0 +1,20 @@
+.btn-prev, .btn-next {
+  position: absolute;
+  top: calc(50% - 20px);
+  line-height: 0;
+  z-index: 5;
+}
+
+.btn-prev {
+  left: 30px;
+}
+
+.btn-next {
+  right: 30px;
+}
+
+@include media-down($breakpoint-lg-max) {
+  .btn-prev, .btn-next {
+    display: none;
+  }
+}

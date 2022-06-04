@@ -1,0 +1,21 @@
+@import 'value-card';
+
+.price__title {
+  max-width: rem(405);
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: rem(60);
+}
+
+.price__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( rem(290), 1fr ));
+  column-gap: rem(30);
+}
+
+@include media-down($breakpoint-lg-max) {
+  .price__row {
+    grid-template-columns: 1fr;
+    row-gap: rem(30);
+  }
+}

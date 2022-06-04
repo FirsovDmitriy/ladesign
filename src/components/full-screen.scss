@@ -23,8 +23,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   max-width: rem(632);
-
   @include media-up(1024px) {
     margin-top: calc(rem(188) + (270 - 188) * (100vw - 1024px) / (1920 - 1024) );
   }

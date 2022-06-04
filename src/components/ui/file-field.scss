@@ -1,0 +1,28 @@
+.file-field input[type=file]::-webkit-file-upload-button {
+  display: none;
+}
+
+.file-field {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  @include media-down(576px) {
+    font-weight: 300;
+  }
+}
+
+.file-field__control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer !important;
+}
+
+.file-field__icon {
+  margin: 0 rem(10) 0 0;
+}

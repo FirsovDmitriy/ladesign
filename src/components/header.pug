@@ -4,11 +4,20 @@ header.header
   .container 
     .header__row 
       a.header__logo(href="#")
-        picture
-          source(media="(max-width: 576px)", srcset="img/logo-s.png") 
-          img(src="img/logo.png", alt="" data-img value="1")
+        if themeDark
+          picture
+            source(media="(max-width: 576px)", srcset="img/logo-theme-dark-s.png") 
+            img(src="img/logo-theme-dark.png", alt="")
+        else
+          picture(data-logo)
+            source(media="(max-width: 576px)", srcset="img/logo-s.png") 
+            img(src="img/logo.png", alt="")
       include menu/menu
       .header__col
         +phone('header__phone')
-        button.header__btn-burger
-          span.header__line 
+        if themeDark
+          button.header__btn-burger.header__btn-burger--dark(data-burger) 
+            span.header__line(data-burger)
+        else 
+          button.header__btn-burger
+            span.header__line(data-burger)

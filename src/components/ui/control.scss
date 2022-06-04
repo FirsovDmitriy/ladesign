@@ -1,0 +1,29 @@
+.control {
+  position: relative;
+}
+
+.control__input {
+  font-weight: 300;
+  font-size: rem(16);
+  width: 100%;
+  padding: rem(9) 0;
+  border-bottom: 1px solid $primary-text-color;
+}
+
+.control__label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  font-size: rem(16);
+  line-height: 150%;
+  color: #ADADAD;
+  cursor: text;
+  transition: all .2s ease-out;
+}
+
+.control__label--active {
+  top: -15px;
+  transform: translateY(0);
+  font-size: rem(13);
+}

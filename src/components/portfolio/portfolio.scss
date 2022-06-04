@@ -10,6 +10,10 @@
   }
 }
 
+.portfolio__header {
+  margin-bottom: rem(40);
+}
+
 .portfolio__row {
   text-align: center;
   margin-top: rem(62);
@@ -22,6 +26,10 @@
 }
 
 @include media-down($breakpoint-lg-max) {
+  .portfolio__header {
+    margin-bottom: rem(30);
+  }
+
   .portfolio__gallery {
     grid-template-columns: repeat(2, minmax( rem(290), 1fr));
   }

@@ -1,0 +1,22 @@
+.carousel-projects {
+  position: relative;
+}
+
+.carousel-projects__wrapper {
+  position: relative;
+  height: 0;
+  padding-top: aspect-ratio(270, 278);
+  overflow: hidden;
+}
+
+@include media-down($breakpoint-xxl-max) {
+  .carousel-projects__wrapper {
+    padding-top: aspect-ratio(270, 290);
+  }
+}
+
+@include media-down($breakpoint-lg-max) {
+  .carousel-projects__wrapper {
+    padding-top: 100%;
+  }
+}

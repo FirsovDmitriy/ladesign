@@ -1,0 +1,54 @@
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.popup__overlay {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popup__body {
+  position: relative;
+  width: rem(800);
+  margin: 0 auto;
+  padding: rem(50);
+  background-color: $white;
+}
+
+.popup__title {
+  margin: 0 0 rem(40) 0;
+}
+
+.popup__row {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+}
+
+.popup__control {
+  flex: 0 0 50%;
+  &:first-child {
+    margin: 0 rem(30) 0 0;
+  }
+}
+
+.popup__agreement {
+  margin: 0 0 0 rem(34);
+}
+
+.popup__close {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  display: flex;
+}

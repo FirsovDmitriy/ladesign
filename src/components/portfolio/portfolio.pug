@@ -4,8 +4,9 @@ include gallery-list
 
 .portfolio 
   .container 
-    h2.portfolio__title портфолио
-    include tab-bar/tab-bar
+    .portfolio__header 
+      h2.portfolio__title портфолио
+      include tab-bar/tab-bar
     .portfolio__gallery 
       each img in imgs 
         +gallery-block(img.path, img.modifier)

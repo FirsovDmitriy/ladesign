@@ -1,7 +1,6 @@
 .tab-bar {
-  display: grid;
-  justify-items: center;
-  margin-bottom: rem(40);
+  display: flex;
+  justify-content: center;
 }
 
 .tab-bar__row {
@@ -11,16 +10,16 @@
   border-bottom: 1px solid $line-color;
 }
 
-.tab-bar__col {
+.tab-bar__item {
   display: flex;
   flex-shrink: 0;
   height: 100%;
   &:not(:last-child) {
-    margin-right: rem(69);
+    margin-right: rem(50);
   }
 }
 
-.tab-bar__col--active {
+.tab-bar__item--active {
   color: $greyish-purplish-blue;
   border-bottom: 2px solid $greyish-purplish-blue;
 }
@@ -30,6 +29,7 @@
   align-self: center;
   font-size: rem(14);
   line-height: math.div(16, 14);
+  letter-spacing: 0.15em;
   margin-right: 5px;
   text-transform: uppercase;
   cursor: pointer;
@@ -41,7 +41,18 @@
 }
 
 @include media-down($breakpoint-md-max) {
-  .tab-bar {
+  .tab-bar__wrapper {
+    display: flex;
     overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@include media-down(576px) {
+  .tab-bar__item:not(:last-child) {
+    margin-right: rem(30);
   }
 }

@@ -4,5 +4,5 @@ export default function swiper (selector, parameter) {
 
   if (document.querySelector(selector)) {
     return new Swiper(selector, parameter)
-  } else console.error(`slider ${selector} not found`)
+  } else console.error(`Ошибка swiper js: слайдер с селектром ${selector} не найден`)
 }

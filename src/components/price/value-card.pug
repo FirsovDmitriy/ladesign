@@ -1,0 +1,21 @@
+include ../ui/button
+- var arrow = true
+
+.value-card(class= item.modifier) 
+  .value-card__header 
+    p.value-card__label= item.label
+    h3.value-card__title= item.title 
+    p.value-card__price= `от ${item.price} ₽`
+  .value-card__wrapper
+    .value-card__body(style="display: none")
+      ul.value-card__list
+        each i in item.list 
+          li.value-card__item= i
+    +button('заказать', item.theme)
+  button.btn.value-card__btn-bottom
+    span развернуть
+    <svg class="value-card__arrow"  viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="15" cy="15" r="14.5" stroke="#D5D5D5"/>
+      <path d="M14.9511 23.1563C15.1464 23.3516 15.463 23.3516 15.6582 23.1563L18.8402 19.9743C19.0355 19.779 19.0355 19.4625 18.8402 19.2672C18.645 19.0719 18.3284 19.0719 18.1331 19.2672L15.3047 22.0956L12.4763 19.2672C12.281 19.0719 11.9644 19.0719 11.7692 19.2672C11.5739 19.4625 11.5739 19.779 11.7692 19.9743L14.9511 23.1563ZM14.8047 7.80273L14.8047 22.8027L15.8047 22.8027L15.8047 7.80273L14.8047 7.80273Z" fill="#777777"/>
+    </svg>
+  

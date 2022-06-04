@@ -1,2 +1,7 @@
 mixin button(text, modifier)
-  button.btn(class= modifier class!=attributes.class )= text
+  button.btn(class=modifier class!=attributes.class )= text
+    if arrow 
+      <svg class="btn__svg" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 1L1 9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.33398 1H9.00065V7.66667" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>

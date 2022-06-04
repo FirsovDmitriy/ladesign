@@ -1,0 +1,90 @@
+include components/projects/projects
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Ladesign - работы
+    link(rel="stylesheet", href="sass/style.scss")
+  body 
+    .wrapper
+
+      .full-screen 
+        .full-screen__overlay 
+          .full-screen__content 
+            h2 loft
+            h4.full-screen__text unique collection
+
+        .full-screen__top 
+          include components/header
+
+      main.main
+        .work
+          .container 
+
+
+            .work__text-block
+              h3.work__title.work__title--first дизайн 1-комнатной квартиры в стиле loft
+              .work__row.work__row--first
+
+                .work__col
+                  ul.work__list
+                    li.work__item 
+                      p.work__description Для кого
+                      p.work__text.work__text--right молодой мужчина
+                    li.work__item 
+                      p.work__description общая площадь
+                      p.work__text.work__text--right 60 м <sup>2</sup>
+                    li.work__item 
+                      p.work__description место расположения
+                      p.work__text.work__text--right Краснодар
+                    li.work__item  
+                      p.work__description срок выполнения
+                      p.work__text.work__text--right 1 месяц
+
+                .work__col
+                  p.work__text В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                  p.work__text В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.
+
+
+            .work__text-block 
+              h3.work__title.work__title--second практичность и рациональное использование каждого квадратного метра
+              .work__row
+                .work__col
+                  h4.work__col-title Задача
+                  p.work__text В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                .work__col 
+                  h4.work__col-title решение
+                  p.work__text В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                  p.work__text В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.
+
+
+          include components/fullscreen/fullscreen
+
+
+            .container
+              .work__block
+                h4 особенности проекта
+                .work__text-columns
+                  p.work__text.work__text--col В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                  p.work__text.work__text--col В интерьере использовано довольно много различных материалов и текстур.
+                  p.work__text.work__text--col В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                  
+                .work__gallery
+                  .work__gallery-item
+                    img.work__gallery-photo(src="img/work1.jpg", alt="")
+                  .work__gallery-item
+                    img.work__gallery-photo(src="img/work2.jpg", alt="")
+                  .work__gallery-item
+                    img.work__gallery-photo(src="img/work3.jpg", alt="")
+                  .work__gallery-item
+                    img.work__gallery-photo(src="img/work4.jpg", alt="")
+
+        include components/ui/application
+
+      include components/footer
+
+    
+    script(type="module" src="js/index.js") 

@@ -4,14 +4,15 @@
 
 .offer__row {
   display: flex;
+  justify-content: space-between;
 }
 
 .offer__col--right {
-  flex: 0 0 rem(380);
+  flex: 0 1 rem(380);
 }
 
 .answer-col {
-  flex: 0 0 rem(687);
+  flex: 0 1 rem(687);
 }
 
 .answer-col__item {
@@ -29,5 +30,37 @@
 }
 
 .answer-col__text {
+  font-weight: 300;
+  line-height: 1.5;
   max-width: rem(580);
+}
+
+@include media-down($breakpoint-xxl-max) {
+  .answer-col {
+    flex-basis: rem(530);
+  }
+}
+
+@include media-down($breakpoint-lg-max) {
+  .offer {
+    padding: rem(70) 0;
+  }
+  .offer__row {
+    flex-direction: column;
+  }
+
+  .offer__col--right {
+    flex: 0;
+    margin: 0 0 rem(30) 0;
+  }
+
+  .answer-col__text {
+    max-width: none;
+  }
+}
+
+@include media-down(576px) {
+  .offer__title {
+    max-width: rem(188);
+  }
 }

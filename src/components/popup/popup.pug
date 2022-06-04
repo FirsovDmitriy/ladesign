@@ -1,0 +1,22 @@
+include ../ui/control
+include ../ui/button
+
+- arrow = true
+
+.popup
+  .popup__overlay
+    .popup__body 
+      h3.popup__title оставьте свои контакты. мы свяжемся с вами и обсудим ваш проект
+      form.popup__form(action="#" method="get")
+        .popup__row 
+          +control('popup__control', 'Ваше имя')
+          +control('popup__control', 'Ваше телефон')
+        .popup__row 
+          +button('отправить', 'btn--dark-theme')
+          span.popup__agreement Нажимая на кнопку, я даю <a href="#">согласие на обработку персональных данных</a>
+      button.popup__close(data-close-button)
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.6">
+            <path d="M25 5L5 25M25 25L5 5L25 25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
